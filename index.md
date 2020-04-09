@@ -1,4 +1,3 @@
-# Bootcode-blog thingy of @_k4m1_
-
+#Boot
 Woot woot, what's this?
 
