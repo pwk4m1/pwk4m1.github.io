@@ -6,4 +6,7 @@
 ### Exploration of bootcode in x86 world
 ## Still empty for now..
 
+```nasm
+mov 	eax, [test]
+```
 
