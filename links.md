@@ -3,8 +3,8 @@
 -----------------------------------------------------------------------------
 
 ## Links
-This page contains a list of useful links to resources related to booting
-different machines.
+	This page contains a list of useful links related to booting
+	different machines.
 
 
 - [osdev](https://wiki.osdev.org)
