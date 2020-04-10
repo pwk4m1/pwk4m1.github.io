@@ -1,4 +1,4 @@
-[home](/) [feedback](/feedback) [links](/links)
+[home](/)    [feedback](/feedback)     [links](/links)
 
 -----------------------------------------------------------------------------
 
