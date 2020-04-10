@@ -11,7 +11,7 @@ different machines.
 
 - [bios mods](https://www.bios-mods.com)
 
-- [coreboot](https://www.corebooot.org)
+- [coreboot](https://www.coreboot.org)
 
 - [seabios](https://seabios.org/SeaBIOS)
 
