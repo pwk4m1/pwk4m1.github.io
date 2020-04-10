@@ -1,5 +1,7 @@
 [home](/) [feedback](/feedback) [links](/links)
+
 -----------------------------------------------------------------------------
+
 ## Links
 This page contains a list of useful links to resources related to booting
 different machines.
