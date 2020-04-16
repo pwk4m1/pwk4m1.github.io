@@ -1,7 +1,10 @@
-[home](/) | [feedback](/feedback) | [links](/links)
+[home](/) [feedback](/feedback) [links](/links)
 
 -----------------------------------------------------------------------------
 
-## Still empty for now..
+## Bootcode blog
+
+	Hay, and welcome to read my random rants, notes, and other general
+	stuff related to firmware coding on x86 platform.
 
 
