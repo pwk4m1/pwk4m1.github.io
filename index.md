@@ -7,5 +7,5 @@
 	Hay, and welcome to read my random rants, notes, and other general
 	stuff related to firmware coding on x86 platform.
 
-		- [ATA PIO driver, thoughts 'n stuff](/disks.md)
+[ATA](/disks.md)
 
