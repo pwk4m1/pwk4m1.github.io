@@ -64,14 +64,14 @@
 
 ```
 
- 				+---------------------- YES ---+
-				V			       |
-			Disk select works?  -- NO --> Retry after reset works?
-				|			       |
-				YES 			       NO
-				| 			       |
-				| 			       V
-				V			Disk has hung. exit
+ 			+---------------------- YES ---+
+			V			       |
+		Disk select works?  -- NO --> Retry after reset works?
+			|			       |
+			YES 			       NO
+			| 			       |
+			| 			       V
+			V			Disk has hung. exit
  ABORT <---- NO ------	Disk R/W params are sane? 
 				|
 				YES
