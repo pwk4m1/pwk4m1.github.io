@@ -34,7 +34,7 @@
 	I eventually came up with, after throughly reading through osdev wiki
 	about ata pio for 10th time.
 
-	![Image](/img/ata_flowchart.jpeg)
+![Image](/img/ata_flowchart.jpeg)
 
 	So now I had a clear idea about how-to implement the driver, and goal
 	for each of the functions I'd be writing. There were few more weird
