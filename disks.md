@@ -263,9 +263,7 @@
 ata_delay_in:
 	push	cx
 	mov	cx, 5
-	.loop:
-		in	al, dx
-		loop	.loop
+	rep 	insb
 	pop	cx
 	ret
 
