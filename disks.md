@@ -73,7 +73,8 @@
 			YES 			       NO
 			| 			       |
 			| 			       V
-			V			Disk has hung. exit
+			|			Disk has hung. exit
+			V
  ABORT <---- NO ------	Disk R/W params are sane? 
 				|
 				YES
