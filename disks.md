@@ -34,7 +34,7 @@
 	I eventually came up with, after throughly reading through osdev wiki
 	about ata pio for 10th time.
 
-![Image](/img/ata_flowchart.jpeg | width=100)
+![Image](/img/ata_flowchart.jpg)
 
 	So now I had a clear idea about how-to implement the driver, and goal
 	for each of the functions I'd be writing. There were few more weird
@@ -53,6 +53,8 @@
 
 		- Believe it or not, disks might have bad sectors & writes may
 		  fail, all kinda weird stuff happens :)
+
+-----------------------------------------------------------------------------
 
 ### Disk IO
 
@@ -126,3 +128,6 @@
 	1's, but others still being eg 0, we can assume *something* is either
 	connected to the bus, or broken.
 
+
+
+-----------------------------------------------------------------------------
