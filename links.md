@@ -18,4 +18,5 @@
 - [AMD Bios & Kernel developer's
 guide](https://www.amd.com/system/files/TechDocs/52740_16h_Models_30h-3Fh_BKDG.pdf)
 
+ - [ATA specs]("http://www.t13.org/")
 
