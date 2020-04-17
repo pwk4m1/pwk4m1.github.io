@@ -39,7 +39,7 @@
 
 	So now I had a clear idea about how-to implement the driver, and goal
 	for each of the functions I'd be writing. There were few more weird
-	things to realize & got right, such as the ~400ns delays to make sure
+	things to realize & get right, such as the ~400ns delays to make sure
 	that there's enoguh time for these slow disks to push correct voltages
 	onto the bus. Overall, there were quite a few weird quirks during the
 	project that I didn't take into account & spent time banging my head
