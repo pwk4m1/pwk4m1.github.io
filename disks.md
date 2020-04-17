@@ -23,6 +23,7 @@
 	to be multi-threaded, and we're only interested in reading the first
 	512 bytes of our boot disk for now. 
 
+-----------------------------------------------------------------------------
 
 ### Flowcharts and stuff
 
@@ -106,6 +107,8 @@
 	read operations to be interrupt-driven instead of current way of 
 	polling.. We'll see when I have motivation to finish the driver /
 	abstraction for pci to make that happen.. Hopefully during next weeks.
+
+-----------------------------------------------------------------------------
 
 ### Floating disks
 	
