@@ -95,7 +95,7 @@
  |				YES
  |				|
  |				V
- +----------------- Permanently bad block, chane the block
+ +----------------- Permanently bad block, change block
 ```
 
 	I think that the flowchart started with only checks of wheter 
