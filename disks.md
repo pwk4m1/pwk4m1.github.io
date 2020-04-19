@@ -120,7 +120,7 @@
 	enough to check if bits 1 and 2 of status register are both 1s, as this
 	should never be the case, but I think it's more neat to just do
 
-```
+```nasm
 	mov 	dx, ATA_STATUS_REGISTER
 	in 	al, dx
 	cmp 	al, 0xFF
@@ -136,7 +136,7 @@
 
 -----------------------------------------------------------------------------
 
-```
+```nasm
 ; BSD 3-Clause License
 ; 
 ; Copyright (c) 2019, k4m1 <k4m1@protonmail.com>
