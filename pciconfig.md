@@ -53,10 +53,11 @@
 
 ## Enumerating
 
-	So, the goal was to get device ID of each device. If we take a look
-	into the standardized part of configuration space, we can see that
-	Device ID & Vendor ID make up the first 32 bits. This means, that we
-	can grab device ID by reading the high 16 bits of first config dword.
+	So, the goal of mine  was to get device ID of each device. 
+	If we take a look into the standardized part of configuration space, 
+	we can see that Device ID & Vendor ID make up the first 32 bits. 
+	This means, that we can grab device ID by reading the high 16 bits of 
+	first config dword.
 
 	The enumeration of all the devices in Pseudo C could look something
 	like this:
