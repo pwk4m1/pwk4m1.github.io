@@ -117,7 +117,7 @@
 	read dword back in from CSD:
 
 		mov 	dx, 0xCF8
-		out 	dx, exa
+		out 	dx, eax
 		add 	dx, 4     ; 0xCF8 + 4 = 0xCFC
 		in 	eax, dx
 
