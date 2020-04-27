@@ -449,6 +449,8 @@ pci_init:
 		cmp 	eax, 256 ; theoretical max of 256 buses
 		jne 	.loop
 	.done:
+		mov 	di, si
+		call 	free
 		popa
 		mov 	sp, bp
 		pop 	bp
