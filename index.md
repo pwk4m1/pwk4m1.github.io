@@ -11,6 +11,6 @@
 
   - [ATA Driver](/disks.md)
 
-  - [PCI Configuration](/pciconfig.md)
+  - [PCI Configuration](/pciconfig.html)
 
 
