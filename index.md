@@ -13,4 +13,6 @@
 
   - [PCI Configuration](/pciconfig.html)
 
+  - [Memory management](/memory.md)
+
 
