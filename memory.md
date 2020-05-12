@@ -71,3 +71,17 @@
 	which simply builds the first block, marks it free, and sets size of
 	the block to be our whole malloc'able memory region.
 
+	And now, finally I can do:
+
+		mov 	cx, some_struct_size
+		call 	malloc
+		test 	di, di
+		jz 	.malloc_errored
+		push 	di
+
+		; ...
+
+		pop 	di
+		call 	free
+	
+
