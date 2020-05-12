@@ -49,23 +49,15 @@
 	What I chose to do, was to loop through whole memory region of malloc
 	and preform following operation:
 
-      +=========> Have we reached end of memory? == YES ==> Exit
-      | 	         |
-      | 		 NO
-      | 		 |
-      | 		 V
-   Next block <== NO === Is the memory marked as free? 
-      ^			 |
-      |			 Yes
-      |			 |
-      |			 V
-      +========== NO === Is the next block marked as free?
-      |	                 |
-      |			 Yes
-      |			 |
-      |			 V
-      |			 Combine these two blocks
-      +==================V
+		1.) Get next memory block
+	
+		2.) Are we at the end of memory? if yes, exit
+
+		3.) Is the memory block free? if not, goto 1
+
+		4.) Is the memory block after this free? if not, goto 1
+
+		5.) Combine this and next memory block, then goto 1
 
 	This kind of function prevents memory fragmentation. As with malloc,
 	this is very slow approach, but it's good enough for this kind of 
