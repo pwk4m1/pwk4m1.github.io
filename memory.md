@@ -2,7 +2,7 @@
 
 -----------------------------------------------------------------------------
 
-## Malloc()
+### Malloc()
 
 	Implementing malloc properly is a bit of an effort I hear...
 	That's why I chose not to :)
@@ -13,7 +13,7 @@
 
 -----------------------------------------------------------------------------
 
-## Memory blocks
+### Memory blocks
 
 	I chose to divide all of my memory into "blocks". in practise this
 	means that I start with one big contiguous chunk of memory, and then
@@ -39,7 +39,7 @@
 
 -----------------------------------------------------------------------------
 
-## Free
+### Free
 
 	Free'ing the allocated memory is seemingly simple, you just replace
 	the 'used' signature with 'free', right? NO! that would lead to
@@ -73,7 +73,7 @@
 
 -----------------------------------------------------------------------------
 
-## Putting it all together
+### Putting it all together
 
 	Apart from malloc() and free() there is one more function related,
 	which simply builds the first block, marks it free, and sets size of
