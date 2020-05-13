@@ -37,6 +37,53 @@
 	This kind of approach would not be very usable in say, Operating 
 	System context, but for single-threaded BIOS it's good enough...
 
+	As is, malloc() from the BIOS could be as follows in pseudo C:
+
+		void *
+		malloc(short size)
+		{
+			/* declarations */
+			ret = 0;
+			size = size + sizeof(MEM_PTR_STRUCT);
+			while (ptr_current < MEM_END) {
+				if (ptr_current->signature != MEM_FREE) {
+					ptr_current += ptr_current->size;
+					continue;
+				}
+				if (ptr_current->size < size) {
+					ptr_current += ptr_current->size;
+					continue;
+				}
+				/* Don't leave small blocks here. */
+				if (ptr_current->size == (size + 0x10)) {
+					ptr_current->signature = MEM_USED;
+					ret = ptr_current;
+					break;
+				} else {
+					ptr_next = ptr_current + size;
+					ptr_next->signature = MEM_FREE;
+					ptr_next->size = (
+							ptr_current->size - \
+							size);
+					ptr_current->signature = MEM_USED;
+					ret = ptr_current;
+				}
+			}
+			return ret;
+		}
+
+	My implementation also has some checks, such as panic if 'out of sync',
+	aka if we encounter block that has invalid or no signature. I chose not
+	to include it into the pseudo C example, mostly to make it even clear
+	that the pseudo code there is not something you should copy-paste
+	directly to any project.. it wont work as is.
+
+	The out of sync I mentioned happened multiple times when fixing the 
+	implementation, as first I didn't take into account the fact that 
+	memory 'block' headers also need space for them, so everything was 
+	working seemingly fine until the moment I used _whole_ block,
+	overwriting the next header, and then got panic at next malloc().
+
 -----------------------------------------------------------------------------
 
 ### Free
@@ -62,6 +109,25 @@
 	This kind of function prevents memory fragmentation. As with malloc,
 	this is very slow approach, but it's good enough for this kind of 
 	application.
+
+	In practise, this could be implemented in pseudo code roughly
+	like this:
+
+		while (ptr_current < MEM_END) {
+			if (ptr_current->signature != MEM_FREE) {
+				ptr_current += ptr_current->size;
+				continue;
+			}
+			ptr_next = ptr_current + ptr_current->size;
+			if (ptr_next->signature != MEM_FREE) {
+				ptr_current = ptr_next;
+				ptr_current += ptr_current->size;
+				continue;
+			}
+			/* Two blocks are both free, combine them */
+			ptr_current->size += ptr_next->size;
+			ptr_current->size += sizeof(memory_block_header);
+		}
 
 -----------------------------------------------------------------------------
 
