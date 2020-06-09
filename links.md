@@ -24,3 +24,4 @@ guide](https://www.amd.com/system/files/TechDocs/52740_16h_Models_30h-3Fh_BKDG.p
 
  - [osdev wiki entry of PCI](https://wiki.osdev.org/PCI)
 
+ - [Libreboot](https://libreboot.org/)
