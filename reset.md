@@ -20,7 +20,7 @@
 
 	Apart from allowing programmers to choose the following actual
 	entrypoint of the motherboard firmware, it might also allow such
-	wizards as motherboard designers to choose alter the location where
+	wizards as motherboard designers to alter the location where
 	ROM memory to use is wired to. Atleast I'd guess so, I'm not an
 	expert on motherboard design, but I don't see any reason why not.
 
