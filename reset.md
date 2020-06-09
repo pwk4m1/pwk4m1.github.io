@@ -18,7 +18,7 @@
 	reserved for 'reset vector', a small piece of code, that allows BIOS
 	programmers to choose where to jump next in the ROM memory.
 
-	Apart from only allowing programmers to choose the following actual
+	Apart from allowing programmers to choose the following actual
 	entrypoint of the motherboard firmware, it might also allow such
 	wizards as motherboard designers to choose alter the location where
 	ROM memory to use is wired to. Atleast I'd guess so, I'm not an
@@ -26,13 +26,15 @@
 
 	Anyway, back to the original topic. We now know that we'll have to
 	have valid code at address 0xFFFFFFF0, as CPU will read first 
-	instructions to execute from there. The very first thing we want
-	to do is to disable interrupts and translation lookaside buffer (TLB).
+	instructions to execute from there.
 
-	Interrupts must be disabled very early on, because we don't yet have
+	The very first thing we want do in our code is to disable interrupts,
+	jump to our actual entrypoint, and then disable TLB.
+
+	- Interrupts must be disabled very early on, because we don't yet have
 	IDT/IVT to use, just like with bootloader and/or kernel developement.
 
-	TLB must be disabled to ensure that, even though paging is disabled,
+	- TLB must be disabled to ensure that, even though paging is disabled,
 	that we don't get silly addresses / false addr translations from
 	memory management unit (MMU).
 
