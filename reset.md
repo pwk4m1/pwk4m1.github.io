@@ -9,7 +9,7 @@
 	a very simple, bootable firmware image for x86 machines out there.
 
 	So, when a computer boots, cpu fetches BIOS from ROM memory,
-	runs the BIOS which will do all kinds of stuff, then loads bootloader
+	runs the BIOS which will do all kinds of stuff and then loads bootloader
 	from disk & passes controll to the bootloader.
 
 	This is all cool 'n dandy, but how it works in practise?
