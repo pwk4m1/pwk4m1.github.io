@@ -15,4 +15,5 @@
 
   - [Memory management](/memory.md)
 
+  - [Firmware Hello World](/reset.md)
 
