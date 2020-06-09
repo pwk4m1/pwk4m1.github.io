@@ -65,7 +65,7 @@
 
 -----------------------------------------------------------------------------
 
-	So, the code above just only disables interrupts, and then
+	So, the code above just disables interrupts, and then
 	jumps into infinite loop. You can test the code easily by running:
 
 	./qemu-system-x86_64 -bios firmware.bin -d in_asm
