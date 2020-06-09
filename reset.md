@@ -185,7 +185,7 @@
 	account in very long time, and which is why my TinyBIOS thingy is still
 	having some silly design choices, is that even though CS is set to
 	0xF000, the ES and DS are not. This means that to use string operations,
-	you should set the ES andor DS to point to ROM too, aka set their values
+	you should set the ES and/or DS to point to ROM too, aka set their values
 	to F000 aswell. I was silly, left them to 0, and kept wondering why 
 	on earth lodsb does not read the values I expect it to load, as I was
 	reading from 0x0000XXXX instead of 0xFFFFXXXX.
