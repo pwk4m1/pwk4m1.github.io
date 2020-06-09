@@ -35,7 +35,7 @@
 	IDT/IVT to use, just like with bootloader and/or kernel developement.
 
 	- TLB must be disabled to ensure that, even though paging is disabled,
-	that we don't get silly addresses / false addr translations from
+	we don't get silly addresses / false addr translations from
 	memory management unit (MMU).
 
 	The bare-bones source code of ours could currently look 
