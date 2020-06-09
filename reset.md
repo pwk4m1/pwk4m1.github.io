@@ -181,7 +181,7 @@
 	full speed. In real world serial conns, you should make sure you're 
 	slow enough to everything to work, good luck :)
 
-	One little sidenote we should be vary of, that I didn't take into
+	One little sidenote you should be vary of, that I didn't take into
 	account in very long time, and which is why my TinyBIOS thingy is still
 	having some silly design choices, is that even though CS is set to
 	0xF000, the ES and DS are not. This means that to use string operations,
