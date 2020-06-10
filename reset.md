@@ -12,7 +12,7 @@
 	runs the BIOS which will do all kinds of stuff and then loads bootloader
 	from disk & passes controll to the bootloader.
 
-	This is all cool 'n dandy, but how it works in practise?
+	This is all cool 'n dandy, but how does it work in practise?
 	When the CPU is powered up, it gets the first instructions to execute
 	from address 0xFFFFFFF0, 16 bytes below 4Gb. These 16 bytes are 
 	reserved for 'reset vector', a small piece of code, that allows BIOS
