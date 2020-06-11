@@ -163,8 +163,8 @@
 
 	add 	dx, 4 			; base + 4
 	mov 	al, 0x0B 		; IRQs enabled, even though I'll
-	out 	dx, al 			; those, but oh well.. Also, 
-					; RTS/DSR set
+	out 	dx, al 			; ignore interrupts, but oh well.. 
+					; Also RTS/DSR set
 
 -----------------------------------------------------------------------------
 
