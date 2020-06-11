@@ -104,7 +104,7 @@
 	it might hopefully be useful to someone who is doing this with a real
 	machine instead.
 
-	The "registers" to configure serial port go as follows, 
+	The registers to configure serial port go as follows, 
 	assuming DLAB is 0:
 
 		Base + 0 : Data register, aka rx/tx buffer
