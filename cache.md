@@ -44,7 +44,7 @@
 
 	Then, I was reminded that oftentimes disk reads can make use of Cache,
 	which led me to doublecheck my CAR exit code... I had disabled 
-	MTRR subsystem, cr3 was 0, tlbs were invalid, but cr0 still had
+	MTRR subsystem, cr3 was 0, but cr0 still had
 	cache-disable bit set as 0... CPU was using non-configured cache.
 
 	After changing cache-disable to 1 in cr0, everything worked just
