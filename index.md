@@ -9,6 +9,8 @@
 
 ### Latest stuff:
 
+  - [Cache as Ram[(/cache.md)
+
   - [ATA Driver](/disks.md)
 
   - [PCI Configuration](/pciconfig.html)
