@@ -38,7 +38,7 @@
 	worked correctly, as did all PCI operations, communication with 
 	interrupt controller, etc...
 
-	This was super confusing, for the longest time I believed I have a bug
+	This was super confusing, for the longest time I believed I had a bug
 	in my disk driver that is only triggered somehow with this changed
 	entrycode.
 
