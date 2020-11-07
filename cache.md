@@ -56,13 +56,14 @@
 
 ### Implementation
 
------------------------------------------------------------------------------
-
 	I wont be going too deeply in detail here, linuxboot & coreboot
 	docs explain this stuff way better than I do, however here's a short
 	walkthrough of how to enable cache-as-ram on intel i386&x86 machines.
 
 	As always, don't copy-paste my code & use it as is, it may break stuff.
+
+-----------------------------------------------------------------------------
+
 
 	%define CACHE_AS_RAM_BASE       0x08000000
 	%define CACHE_AS_RAM_SIZE       0x2000
