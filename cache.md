@@ -18,6 +18,8 @@
 	eager to implement this, skipped parts of intel's manual regarding
 	Caching, and messed things up for quite a while..
 
+-----------------------------------------------------------------------------
+
 ### Issues
 
 	The setup part was quite straightforward, there aren't _too_ many
@@ -50,7 +52,11 @@
 	After changing cache-disable to 1 in cr0, everything worked just
 	fine again.
 
+-----------------------------------------------------------------------------
+
 ### Implementation
+
+-----------------------------------------------------------------------------
 
 	I wont be going too deeply in detail here, linuxboot & coreboot
 	docs explain this stuff way better than I do, however here's a short
