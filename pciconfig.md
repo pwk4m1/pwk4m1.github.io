@@ -4,7 +4,7 @@
 
 ## PCI 
 
-	PCI spec feels pretty nice so far, sane and clean. PCI Bus is a local
+	PCI spec feels pretty nice so far, quite clean. PCI Bus is a local
 	computer bus that connects multiple different devices, buses & such
 	to cpu in kind of unified, simple way. The devices connected to PCI bus
 	appear to busmaster as if they'd be directly connected to it's own bus

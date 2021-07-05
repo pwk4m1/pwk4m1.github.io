@@ -76,7 +76,7 @@
 			| 			       V
 			|			Disk has hung. exit
 			V
- ABORT <---- NO ------	Disk R/W params are sane? 
+ ABORT <---- NO ------	Disk R/W params are correct? 
 				|
 				YES
 				|
