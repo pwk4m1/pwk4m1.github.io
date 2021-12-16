@@ -19,3 +19,4 @@
 
   - [Firmware Hello World](/reset.md)
 
+  - [Callback from 64bit to 16bit mode](/modecallbacks.md)
