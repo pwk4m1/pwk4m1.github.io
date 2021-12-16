@@ -4,8 +4,8 @@
 
 ## Callbacks from long 64bit mode to real 16bit mode.
 
-	Whilst working on building a bootloader for OS project we encountered
-	(and I learned) that it's quite common nowadays to have images that
+	Whilst working on building a bootloader for OS project, encountered
+	the fact that it's quite common nowadays to have images that
 	have loaders for both UEFI and legacy bios loaders. As far as what
 	short web searching told me, the loaders are still separate. It works
 	but we thought about making sort of 'unified' loader, aka having 
