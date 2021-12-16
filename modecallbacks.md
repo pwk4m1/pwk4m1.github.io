@@ -7,8 +7,8 @@
 	Whilst working on building a bootloader for OS project, encountered
 	the fact that it's quite common nowadays to have images that
 	have loaders for both UEFI and legacy bios loaders. As far as what
-	short web searching told me, the loaders are still separate. It works
-	but we thought about making sort of 'unified' loader, aka having 
+	short web searching + friend told me, the loaders are still separate. 
+	It works but thought about making sort of 'unified' loader, aka having 
 	platform-specific 'abstraction api'/1st stage loader, and unified 
 	second stage loader that works exactly the same for both UEFI and 
 	legacy bios devices.
