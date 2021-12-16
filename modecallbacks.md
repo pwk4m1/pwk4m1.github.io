@@ -61,10 +61,11 @@
 ### Switch from 64bit long mode back to real 16bit mode
 
 	To return back from long mode to protected 32bit mode we only have to
-	disable EFER MSR, disabling PG bit of command register 0, jumping to
-	CS32:offset. Then disable PAE from command register 4 and flush tlb
-	by setting command register 3 to 0. Finally, set segments to
-	DS32 and you've successfully returned to 32bit protected mode.
+	disable LM bit from EFER MSR, disabling PG bit of command register 0, 
+	jumping to CS32:offset. Then disable PAE from command register 4 
+	and flush tlb by setting command register 3 to 0. 
+	Finally, set segments to DS32 and you've successfully returned to 
+	32bit protected mode.
 
 		The next step is to return to _protected_ 16bit mode.
 	this bit is quite a lot more simple than previous one, all we have to
