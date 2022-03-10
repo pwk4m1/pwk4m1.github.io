@@ -1,0 +1,114 @@
+Here goes the design for proxy project<name to be chosen>
+configuration setup
+
+verb:
+	option1:
+		- value of option 1
+	option2:
+		- value of option 2
+	optionN:
+		- value of option N
+
+Currently supported verbs:
+
+	More accurate description of each verb is listed below the
+	list of verbs:
+
+	replace_eq: 	Replaces byte sequence with another byte sequence 
+			of equal length.
+
+	replace_pad:	Replaces byte sequence with a smaller one, adds
+			padding either directly to replacing byte sequence
+			or at the end of the data stream.
+
+	replace_regex:	Replaces byte sequence matching 'regex' with static
+			byte sequence.
+
+	freplace_eq: 	Replaces huge byte sequence with another byte sequence
+			of equal size. Both sequences are fetched from 
+			files provided as parameters.
+
+	freplace_pad:	Replaces huge byte sequence with a smaller one, and
+			automatically pads smaller one to match the size of
+			huge sequence. Huge sequence is fetched from file.
+
+	freplace_regex:	Replaces byte sequence matching regex with new byte
+			sequence fetched from file provided as argument.
+
+	replace_add: 	Alters byte at offset, or immediately after signature
+			with original byte + value given as parameter.
+
+	replace_sub:	Alters byte at offset, or immediately after signature
+			with original byte - value given as parameter.
+
+Accurate descriptions:
+	replace_eq: 	Replaces byte sequence with another byte sequence 
+			of equal length.
+		options:
+			replace:	Byte sequence to be replaced
+			with: 		What to replace ^ with
+		Eg:
+			replace_eq:
+				replace:
+					- ascii: "HELLO"
+				with:
+					- ascii: "HALLO"
+
+			Example above would replace all occurrences of
+			"HELLO" with "HALLO" from each packet that is 
+			passed through the proxy.
+
+			replace_eq:
+				replace:
+					- hex: "c0 de de c0"
+				with:
+					- ascii: "hayy"
+			
+			Example above would replace all occurrences of 
+			"c0 de de c0" byte sequence with ascii text
+			"hayy".
+
+	replace_pad:	Replaces byte sequence with a smaller one, adds
+			padding either directly to replacing byte sequence
+			or at the end of the data stream
+		options:
+			replace:	Byte sequence to be replaced
+			with: 		What to replace ^ with
+			padchar: 	Byte to use for padding
+			where: 		packet_end or sequence_end for
+					adding padding at end of the data
+					stream or at the end of the 
+					'with'.
+		Eg:
+			replace_pad:
+				replace:
+					- hex: "01 02 03"
+				with:
+					- hex: "02"
+				padchar:
+					- hex: "55"
+				where:
+					packet_end
+
+			Example above would replace all occurances of
+			"01 02 03" with "02", padding the packet at the
+			end with two "55" bytes, because size-difference
+			of replace and with is two bytes.
+			
+			replace_pad:
+				replace:
+					- ascii: "ABCD"
+				with:
+					- hex: "41 42 43"
+				padchar:
+					- ascii: "A"
+				where:
+					sequence_end
+
+			Example above would replace all occurrences of 
+			"ABCD" with "ABCA", because the size difference
+			between "ABCD" and "ABC" is 1 byte, padchar is set 
+			to be A.
+
+
+
